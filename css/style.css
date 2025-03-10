@@ -18,18 +18,108 @@
 }
 
 
-nav ul li {
-    display: inline-block;
-    background-color: #00274C;
-    padding: 2%;
-    width: 20%;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Header Styling */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background: #00274C;
+    color: white;
+    padding: 1rem;
+}
+
+header img {
+    max-width: 80px;
+    height: auto;
+}
+
+/* Navigation */
+/* nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+nav a:hover, nav a:focus, .active a {
+    background: #ffcb05;
+    color: #00274C;
+    border-radius: 5px;
+}
+
+
+/* Main Content Grid Layout */
+main {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 10%;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #00274C;
+}
+
+figure {
+    margin: 0;
     text-align: center;
 }
 
-nav ul li a {
-    color: #FFCB05;
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
-ul {
-    justify-content: center;
+footer {
+    background: #00274C;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ffcb05;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.support a {
+    color: red;
 }
