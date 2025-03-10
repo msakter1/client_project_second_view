@@ -32,27 +32,36 @@ body {
 
 /* Header Styling */
 header {
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     background: #00274C;
     color: white;
-    padding: 1rem;
+    padding: 1rem; */
 
-    justify-content: center; /* Ensures vertical centering */
+    display: grid;
+    grid-template-rows: auto auto; 
+    grid-template-columns: 1fr; 
+    align-items: center;
+    justify-items: center;
     text-align: center;
+    width: 100%;
+    padding: 1rem;
+    background: #00274C;
+    color: white;
 }
 
 header img {
     max-width: 20%;
     height: auto;
+    margin-bottom: 1rem;
 }
 
-/* Navigation */
-/* nav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+/* Navigation
+nav ul li {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr;
+    color: ;
 } */
 
 nav ul {
