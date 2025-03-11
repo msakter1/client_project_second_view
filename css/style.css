@@ -20,7 +20,7 @@
 
 /* Global Styles */
 body {
-    font-family: IBM Plex Serif;
+    font-family:'Montserrat', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
@@ -72,7 +72,7 @@ nav ul {
 }
 
 nav a {
-    color: rgb(103, 177, 202);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1rem;
     padding: 0.5rem;
