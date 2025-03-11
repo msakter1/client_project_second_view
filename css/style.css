@@ -20,7 +20,7 @@
 
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: IBM Plex Serif;
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
@@ -137,6 +137,6 @@ footer a:hover {
 }
 
 nav li:not(:last-child) {
-    border-right: 2px solid white;
+    border-right: 1px solid white;
     padding-right: 1rem;
 }
