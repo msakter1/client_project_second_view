@@ -69,6 +69,7 @@ nav ul {
     gap: 0.5rem;
     list-style: none;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
