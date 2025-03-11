@@ -1,5 +1,5 @@
 .skip-link {
-    position: relative;
+    position: absolute;
     top: -1000px;
 
     z-index: 1000;
@@ -32,18 +32,10 @@ body {
 
 /* Header Styling */
 header {
-    /* display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    background: #00274C;
-    color: white;
-    padding: 1rem; */
-
     display: grid;
     grid-template-rows: auto auto; 
     grid-template-columns: 1fr; 
     align-items: center;
-    justify-items: center;
     text-align: center;
     width: 100%;
     padding: 1rem;
@@ -54,7 +46,15 @@ header {
 header img {
     max-width: 20%;
     height: auto;
-    margin-bottom: 1rem;
+    justify-self: start;
+    /* margin-bottom: 0; 
+    align-self: start;
+    justify-self: start; */
+
+
+    /* position: absolute;
+    top: 10px;  
+    left: 10px; */
 }
 
 /* Navigation
@@ -109,7 +109,7 @@ figure {
     text-align: center;
 }
 
-img {
+main img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
