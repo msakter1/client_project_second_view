@@ -135,3 +135,8 @@ footer a:hover {
 .support a {
     color: red;
 }
+
+nav li:not(:last-child) {
+    border-right: 2px solid white;
+    padding-right: 1rem;
+}
