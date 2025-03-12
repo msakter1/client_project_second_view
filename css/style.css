@@ -37,11 +37,12 @@ header {
     grid-template-columns: 1fr; 
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: auto;
     padding: 1rem;
     background: #00274C;
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
+    /* overflow: hidden; */
 }
 
 header img {
@@ -142,3 +143,7 @@ nav li:not(:last-child) {
     border-right: 1px solid white;
     padding-right: 1rem;
 }
+
+/* NO hori scrollbar */
+
+/* make sure that the banner is good */
