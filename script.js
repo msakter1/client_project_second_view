@@ -79,3 +79,10 @@ document.querySelectorAll(".card-image").forEach(image => {
         cardText.classList.toggle("revealed");  // Toggle the visibility of the text
     });
 });
+
+fetch(window.location.href)
+.then(response => {
+  if (!response.ok) {
+    window.location.href = "/404.html";
+  }
+});
