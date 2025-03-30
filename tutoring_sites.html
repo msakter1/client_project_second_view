@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
     <title>Tutoring Sites</title>
 </head>
 <body>
     <header>
         <a href="#main-content" class="skip-link">Skip to Main Content</a>
-        <img src="images/umsi-logo-1.png" alt="UMSI Logo">
+        <a href="index.html" id="logo">
+            <img src="images/umsi-logo-1.png" alt="UMSI Logo">
+        </a>
         <br> <br>
 
         <div class="search-bar">
-            <input type="text" placeholder="SEARCH" class="search-input">
-            <button class="search-button">
+            <input type="text" placeholder="SEARCH" class="search-input" id="searchInput">
+            <button class="search-button" onclick="searchPages()">
               <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
               </svg>
             </button>
         </div>
 
-
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href = "study_spaces.html">Study Spaces</a></li>
                 <li class="active"><a href = "tutoring_sites.html">Tutoring Sites</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
@@ -34,19 +36,27 @@
     </header>
 
     <h1><strong>Tutoring Sites</strong></h1>
+    <div id="results"></div>
     <main id="main-content" tabindex="-1">
-        
         <section tabindex="0">
             <h2>Tutoring Through UMSI</h2>
-            <img src="images/tutoring1-up.png" alt="Students getting help in a lecture room">
-
-            <p>The UMSI Academic Success Team provides peer tutoring for UMSI students, including support for programming and math courses. Peer tutoring is available for courses like SI 106, SI 206, SI 506, SI 507, and general Python. Math tutoring covers areas like linear algebra, statistics, and general math. You can find additional resources and access a Peer-to-Peer Tutor Directory. For more details, you can reach out to umsi.academicsuccess@umich.edu</p>
-
+            <article>
+                <figure>
+                    <img src="images/tutoring1-up.png" alt="Students getting help in a lecture room">
+                    <figcaption>Students receiving help during lecture</figcaption>
+                </figure>
+    
+                <p>The UMSI Academic Success Team provides peer tutoring for UMSI students, including support for programming and math courses. Peer tutoring is available for courses like SI 106, SI 206, SI 506, SI 507, and general Python. Math tutoring covers areas like linear algebra, statistics, and general math. You can find additional resources and access a Peer-to-Peer Tutor Directory. For more details, you can reach out to umsi.academicsuccess@umich.edu</p>    
+            </article>
 
             <h2>Booking With Peer Tutors</h2>
-            <img src="images/tutoring2-up.png" alt="students working together in a lecture room">
-
-            <p>UMSI offers peer tutoring by experienced students knowledgeable in specific programming and math subjects. Each tutor has a unique approach to teaching, providing you with the flexibility to choose a tutor based on your individual learning style. You can select their availability to sign up for sessions with your preferred tutor on any given day.</p>
+            <article>
+                <figure>
+                    <img src="images/tutoring2-up.png" alt="students working together in a lecture room">
+                    <figcaption>Students working together</figcaption>
+                </figure>
+                <p>UMSI offers peer tutoring by experienced students knowledgeable in specific programming and math subjects. Each tutor has a unique approach to teaching, providing you with the flexibility to choose a tutor based on your individual learning style. You can select their availability to sign up for sessions with your preferred tutor on any given day.</p>
+            </article>
 
             <p>For more information and to sign up for tutoring, visit the <a href="https://sites.google.com/umich.edu/umsitutoring/home?authuser=1">UMSI Tutoring page</a></p>
         </section tabindex="0">
@@ -62,5 +72,13 @@
     </footer>
 
 </body>
+
+<script>
+    document.querySelector(".search-input").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            searchPages();
+        }
+    });
+</script>
 
 </html>

@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
     <title>Study Spaces</title>
 </head>
 <body>
     <header>
         <a href="#main-content" class="skip-link">Skip to Main Content</a>
-        <img src="images/umsi-logo-1.png" alt="UMSI Logo">
+        <a href="index.html" id="logo">
+            <img src="images/umsi-logo-1.png" alt="UMSI Logo">
+        </a>
         <br> <br>
 
         <div class="search-bar">
-            <input type="text" placeholder="SEARCH" class="search-input">
-            <button class="search-button">
+            <input type="text" placeholder="SEARCH" class="search-input" id="searchInput">
+            <button class="search-button" onclick="searchPages()">
               <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
               </svg>
@@ -24,7 +27,7 @@
 
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li class="active"><a href = "study_spaces.html">Study Spaces</a></li>
                 <li><a href = "tutoring_sites.html">Tutoring Sites</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
@@ -35,72 +38,116 @@
     </header>
 
     <h1><strong>Study Spaces</strong></h1>
-    <main id="main-content" tabindex="-1">
-        
+    <div id="results"></div>
+    <main id="main-content" tabindex="-1"> 
         <section tabindex="0">
             <h2>Central Campus Study Spaces</h2>
-            <img src="images/law-library-up.png" alt="a moody image of the law libary taken from the middle of the corrider">
-            <br> <br>
-            <strong>Michigan Union</strong>: 
-            <ul>
-                <li>Almosphere: Very social. It's great for group studying</li>
-                <li>Features: comfortable seating, food options, meeting rooms</li>
-                <li>Address: 530 S State St, Ann Arbor, MI 48109</li>
-            </ul>
+            <figure>
+                <img src="images/inside-law-lib-(1).jpg" alt="a moody image of the law libary taken from the middle of the corrider">
+                <figcaption>Law Library Building</figcaption>
+            </figure>
+            <br>
 
-            <strong>Shapiro Library (the UgLi)</strong>: 
-            <ul>
-                <li>Atmosphere: Mix of quiet and social space</li>
-                <li>Features: Collaborative study rooms, computer stations, printers, books</li>
-                <li>Address: 919 S University Ave, Ann Arbor, MI 48109</li>
-            </ul>
+            <div class="cards">
+                <div class="lib-card">
+                    <div class="header"><h3><strong>Shapiro Library (the UgLi)</strong> </h3></div>
+                    <div class="card-main-con">
+                        <img src="images/card-shapiro-(1).jpg" alt="Students in front of the Shapiro Undergraduate Library" class="card-image">
+                        <ul>
+                            <li>Atmosphere: Mix of quiet and social space</li>
+                            <li>Features: Collaborative study rooms, computer stations, printers, books</li>
+                            <li>Address: 919 S University Ave, Ann Arbor, MI 48109</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <strong>Hatcher Graduate Library</strong>: 
-            <ul>
-                <li>Atmosphere: mostly quiet and best for individual studying</li>
-                <li>Features: Quiet reading rooms, reservable study spaces, and book collections</li>
-                <li>Address: 913 S University Ave, Ann Arbor, MI 48109</li>
-            </ul>
-
-            <strong>Law Library</strong>: 
-            <ul>
-                <li>Atmosphere: Extremely quiet and formal</li>
-                <li>Features: Gothic architecture, large study tables</li>
-                <li>Address: Legal Research Building, 801 Monroe St, Ann Arbor, MI 48109</li>
-            </ul>
+                <div class="lib-card">
+                    <div class="header"><h3><strong>Hatcher Graduate Library</strong> </h3></div>
+                    <div class="card-main-con">
+                        <img src="images/card-hatcher-(1).jpg" alt="Hatcher Graduate Library" class="card-image">
+                        <ul>
+                            <li>Atmosphere: mostly quiet and best for individual studying</li>
+                            <li>Features: Quiet reading rooms, reservable study spaces, and book collections</li>
+                            <li>Address: 913 S University Ave, Ann Arbor, MI 48109</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lib-card">
+                    <div class="header"><h3><strong>Law Library</strong></h3></div>
+                    <div class="card-main-con">
+                        <img src="images/card-law-library-(1).jpg" alt="Inside the law library" class="card-image">
+                        <ul>
+                            <li>Atmosphere: Extremely quiet and formal</li>
+                            <li>Features: Gothic architecture, large study tables</li>
+                            <li>Address: Legal Research Building, 801 Monroe St, Ann Arbor, MI 48109</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section tabindex="0">
             <h2>North Campus Study Spaces</h2>
-            <img src="images/dude-up.png" alt="A two-point perspective image of the Duderstadt library in North Campus of University of Michigan">
+            <figure>
+                <img src="images/snow-dude-(1).jpg" alt="A two-point perspective image of the Duderstadt library in North Campus of University of Michigan">
+                <figcaption>Duderstadt Library Building</figcaption>
+            </figure>
+            
 
             <br> <br>
-            <strong>Duderstadt Center (The Dude)</strong>:
-            <ul>
-                <li>Almosphere: Mix of collaborative and quiet areas</li>
-                <li>Features: High-tech resources, computer labs, creative spaces</li>
-                <li>Address: 2281 Bonisteel Blvd, Ann Arbor, MI 48109</li>
-            </ul>
-
-            <strong>Pierpont Commons</strong>: 
-            <ul>
-                <li>Atmosphere: Social and lively, great for casual studying or group projects</li>
-                <li>Features: Food options, cozy seating</li>
-                <li>Address: 2101 Bonisteel Blvd, Ann Arbor, MI 48109</li>
-            </ul>
-
-            <strong>Art & Architecture Building</strong>: 
-            <ul>
-                <li>Atmosphere: Quiet and creative</li>
-                <li>Features: Bright spaces, design-focused, large worktables</li>
-                <li>Address: 2000 Bonisteel Blvd, Ann Arbor, MI 48109</li>
-            </ul>
+            <div class="cards">
+                <div class="lib-card">
+                    <div class="header"><h3><strong>Duderstadt Center (The Dude)</strong></h3></div>
+                    <div class="card-main-con">
+                        <img src="images/card-dude-(1).jpg" alt="snowy picture of the duderstadt library" class="card-image">
+                        <ul>
+                            <li>Almosphere: Mix of collaborative and quiet areas</li>
+                            <li>Features: High-tech resources, computer labs, creative spaces</li>
+                            <li>Address: 2281 Bonisteel Blvd, Ann Arbor, MI 48109</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lib-card">
+                    <div class="header"><h3><strong>Pierpont Commons</strong> </h3></div>
+                    <div class="card-main-con">
+                        <img src="images/card-pierpont-(1).jpg" alt="A wide picture of the pierpont building" class="card-image">
+                        <ul>
+                            <li>Atmosphere: Social and lively, great for casual studying or group projects</li>
+                            <li>Features: Food options, cozy seating</li>
+                            <li>Address: 2101 Bonisteel Blvd, Ann Arbor, MI 48109</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lib-card">
+                    <div class="header"><h3><strong>Art & Architecture Building</strong> </h3></div>
+                    <div class="card-main-con">
+                        <img src="images/card-art&arch-(1).jpg" alt="dark gray brick exterior of the Art and Architecture building" class="card-image">
+                        <ul>
+                            <li>Atmosphere: Quiet and creative</li>
+                            <li>Features: Bright spaces, design-focused, large worktables</li>
+                            <li>Address: 2000 Bonisteel Blvd, Ann Arbor, MI 48109</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </main>
 
     <footer>
         <p>MSI Academic Advising | <strong><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></strong></p>
     </footer>
+
+    <script>
+        document.querySelector(".search-input").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                searchPages();
+            }
+        });
+    </script>
     
 </body>
 

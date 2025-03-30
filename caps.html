@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
     <title>CAPS</title>
 </head>
 <body>
     <header>
         <a href="#main-content" class="skip-link">Skip to Main Content</a>
-        <img src="images/umsi-logo-1.png" alt="UMSI Logo">
+        <a href="index.html" id="logo">
+            <img src="images/umsi-logo-1.png" alt="UMSI Logo">
+        </a>
         <br> <br>
 
         <div class="search-bar">
-            <input type="text" placeholder="SEARCH" class="search-input">
-            <button class="search-button">
+            <input type="text" placeholder="SEARCH" class="search-input" id="searchInput">
+            <button class="search-button" onclick="searchPages()">
               <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
               </svg>
@@ -24,7 +27,7 @@
 
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href = "study_spaces.html">Study Spaces</a></li>
                 <li><a href = "tutoring_sites.html">Tutoring Sites</a></li>
                 <li class="active"><a href = "caps.html">CAPS</a></li>
@@ -34,48 +37,61 @@
     </header>
 
     <h1><strong>Counseling and Psychological Services (CAPS)</strong></h1>
+    <div id="results"></div>
     <main id="main-content" tabindex="-1">
         <p class="support" tabindex="0"><strong>Need support? CAPS can help. <u><a href="https://caps.umich.edu/article/scheduling-appointment" target="_blank">Schedule an appointment today!</a></u></strong></p>
 
         <section tabindex="0">
             <h2>About CAPS</h2>
-            <img src="images/caps1-size-up.png" alt="A side angled image of Angell Hall">
+            <figure>
+                <img src="images/caps1-size-up.png" alt="A side angled image of Angell Hall">
+                <figcaption>Angel Hall</figcaption>
+            </figure>
 
-            <p>University Health & Counseling <a href="https://uhs.umich.edu/">(UHS)</a> supports the health and well-being of students by helping them thrive, manage stress, and build meaningful connections. UHC is comprised of Counseling and Psychological Services <a href="https://caps.umich.edu/">(CAPS)</a>, which offers counseling services, and University Health Service (UHS), which provides medical care. For medical services, students can visit the UHS website, while CAPS focuses on mental health support through multicultural and multi-disciplinary approaches. CAPS offers both in-person and virtual counseling to accommodate diverse student needs.</p>
+            <article>
+                <p>University Health & Counseling <a href="https://uhs.umich.edu/">(UHS)</a> supports the health and well-being of students by helping them thrive, manage stress, and build meaningful connections. UHC is comprised of Counseling and Psychological Services <a href="https://caps.umich.edu/">(CAPS)</a>, which offers counseling services, and University Health Service (UHS), which provides medical care. For medical services, students can visit the UHS website, while CAPS focuses on mental health support through multicultural and multi-disciplinary approaches. CAPS offers both in-person and virtual counseling to accommodate diverse student needs.</p> 
 
-            <p>Located on the 4th floor of the Michigan Union, the CAPS Front Desk is open throughout the day to assist with questions and connect students to the appropriate services. Students can reach the office by phone at (734) 764-8312. CAPS also provides a limited number of <a href="https://caps.umich.edu/article/private-counseling-rooms">private spaces</a> for telecounseling sessions; more information is available through the Front Desk.</p>
+                <br>
+
+                <p>Located on the 4th floor of the Michigan Union, the CAPS Front Desk is open throughout the day to assist with questions and connect students to the appropriate services. Students can reach the office by phone at (734) 764-8312. CAPS also provides a limited number of <a href="https://caps.umich.edu/article/private-counseling-rooms">private spaces</a> for telecounseling sessions; more information is available through the Front Desk.</p>
+            </article>
         </section>
         
 
         <section tabindex="0">
             <h2>CAPS Services</h2>
-            <img src="images/study1-size-up.png" alt="Two girls studying together">
+            <figure>
+                <!-- TODO: change imgage. too blury -->
+                <img src="images/study1-size-up.png" alt="Two girls studying together">
+            </figure>
             <br> <br>
 
-            <strong>Let's Talk</strong>:
-            <ul>
-                <li>“Let's Talk” is a free program that supports students starting their mental health journeys. It provides casual meetings with counselors during specific drop-in times for initial support and advice</li>
-            </ul>
+            <article>
+                <h3>Let's Talk</h3>
+                <p>“Let's Talk” is a free program that supports students starting their mental health journeys. It provides casual meetings with counselors during specific drop-in times for initial support and advice.</p>
+            </article>
+            
+            <article>
+                <h3>Uwill Teletherapy Services</h3>
+                <p>Uwill is an addition to CAPS services that provides students with video, phone, chat, and message sessions with licensed mental health professionals at no cost.</p>
+            </article>
 
-            <strong>Uwill Teletherapy Services</strong>:
-            <ul>
-                <li>Uwill is an addition to CAPS services that provides students with video, phone, chat, and message sessions with licensed mental health professionals at no cost</li>
-            </ul>
-
-            <strong>Togetherall</strong>:
-            <ul>
-                <li>Togetherall is an online, anonymous peer-support tool available for free to students. It is a clinically moderated, online peer-to-peer mental health community that reaches and empowers a diverse population of students to anonymously seek and provide support</li>
-            </ul>
+            <article>
+                <h3>Togetherall</h3>
+                <p>Togetherall is an online, anonymous peer-support tool available for free to students. It is a clinically moderated, online peer-to-peer mental health community that reaches and empowers a diverse population of students to anonymously seek and provide support.</p>
+            </article>
         </section>
 
         <section tabindex="0">
-            <h2>Links:</h2>
-            <p>To learn more about CAPS services or if you believe you can benefit from any of these services:</p>
+            <h2>Links</h2>
 
-            <ul>
-                <li>Visit: <a href="https://caps.umich.edu/">CAPS website</a> </li>
-                <li>Make an appointment: <a href="https://caps.umich.edu/article/scheduling-appointment">CAPS appointment</a></li>
-            </ul>
+            <article>
+                <h3>Learn more about CAPS:</h3>
+                <ul>
+                    <li>Visit: <a href="https://caps.umich.edu/">CAPS website</a> </li>
+                    <li>Make an appointment: <a href="https://caps.umich.edu/article/scheduling-appointment">CAPS appointment</a></li>
+                </ul>
+            </article>
         </section>
        
         <!-- Content taken from the CAPS website (https://caps.umich.edu/) and modifed using CHATGPT using the promt "Summarize the content in a easy understandable format"
@@ -85,6 +101,13 @@
         <p>MSI Academic Advising | <strong><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></strong></p>
     </footer>
     
+    <script>
+        document.querySelector(".search-input").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                searchPages();
+            }
+        });
+    </script>
 </body>
 
 </html>
