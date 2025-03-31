@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
     <title>Study Spaces</title>
 </head>
 <body>
@@ -31,6 +31,7 @@
                 <li class="active"><a href = "study_spaces.html">Study Spaces</a></li>
                 <li><a href = "tutoring_sites.html">Tutoring Sites</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
         <!-- <h1>Study Spaces</h1> -->
@@ -39,7 +40,7 @@
 
     <h1><strong>Study Spaces</strong></h1>
     <div id="results"></div>
-    <main id="main-content" tabindex="-1"> 
+    <main id="main-content"> 
         <section tabindex="0">
             <h2>Central Campus Study Spaces</h2>
             <figure>
@@ -49,7 +50,7 @@
             <br>
 
             <div class="cards">
-                <div class="lib-card">
+                <div class="lib-card" tabindex="0">
                     <div class="header"><h3><strong>Shapiro Library (the UgLi)</strong> </h3></div>
                     <div class="card-main-con">
                         <img src="images/card-shapiro-(1).jpg" alt="Students in front of the Shapiro Undergraduate Library" class="card-image">
@@ -61,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="lib-card">
+                <div class="lib-card" tabindex="0">
                     <div class="header"><h3><strong>Hatcher Graduate Library</strong> </h3></div>
                     <div class="card-main-con">
                         <img src="images/card-hatcher-(1).jpg" alt="Hatcher Graduate Library" class="card-image">
@@ -73,7 +74,7 @@
                     </div>
                 </div>
                 
-                <div class="lib-card">
+                <div class="lib-card" tabindex="0">
                     <div class="header"><h3><strong>Law Library</strong></h3></div>
                     <div class="card-main-con">
                         <img src="images/card-law-library-(1).jpg" alt="Inside the law library" class="card-image">
@@ -96,8 +97,11 @@
             
 
             <br> <br>
+
+        <!-- <button class="scroll-left">&#10094;</button>  -->
             <div class="cards">
-                <div class="lib-card">
+
+                <div class="lib-card" tabindex="0">
                     <div class="header"><h3><strong>Duderstadt Center (The Dude)</strong></h3></div>
                     <div class="card-main-con">
                         <img src="images/card-dude-(1).jpg" alt="snowy picture of the duderstadt library" class="card-image">
@@ -109,7 +113,7 @@
                     </div>
                 </div>
                 
-                <div class="lib-card">
+                <div class="lib-card" tabindex="0">
                     <div class="header"><h3><strong>Pierpont Commons</strong> </h3></div>
                     <div class="card-main-con">
                         <img src="images/card-pierpont-(1).jpg" alt="A wide picture of the pierpont building" class="card-image">
@@ -121,7 +125,7 @@
                     </div>
                 </div>
                 
-                <div class="lib-card">
+                <div class="lib-card" tabindex="0">
                     <div class="header"><h3><strong>Art & Architecture Building</strong> </h3></div>
                     <div class="card-main-con">
                         <img src="images/card-art&arch-(1).jpg" alt="dark gray brick exterior of the Art and Architecture building" class="card-image">
@@ -132,13 +136,16 @@
                         </ul>
                     </div>
                 </div>
+                <!-- add more cards -->
             </div>
-            
+        <!-- <button class="scroll-right">&#10095;</button> -->
         </section>
     </main>
 
     <footer>
-        <p>MSI Academic Advising | <strong><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></strong></p>
+        <p>MSI Academic Advising | <strong><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></strong></p>   
+        
+        <p>© Copyrights <span id="year"></span> by UMSI. All rights reserved.</p>
     </footer>
 
     <script>

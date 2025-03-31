@@ -30,10 +30,11 @@
 
         <nav>
             <ul>
-                <li class="active"><a href="inde.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href = "study_spaces.html">Study Spaces</a></li>
                 <li><a href = "tutoring_sites.html">Tutoring Sites</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
         <!-- <h1>Student Success Portal</h1> -->
@@ -48,13 +49,19 @@
             <h2>Welcome to the UM Grad Success Navigator</h2>
             <p> Your Comprehensive Guide to Resources for Graduate School Success</p>
             <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
-            <ol>
+
+            <article>Academic Resources</article>
+            <article>Physical Health</article>
+            <article>Mental Health</article>
+            <article>Life Outside Classroom</article>
+            <article>Contact</article>
+            <!-- <ol>
                 <li>Academic Resources</li>
                 <li>Physical Health</li>
                 <li>Mental Health</li>
                 <li>Life Outside Classroom</li>
                 <li>Contact</li>
-            </ol>
+            </ol> -->
         </section>
 
         <section tabindex="0">
@@ -145,29 +152,11 @@
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
     </main>
     <footer>
-        <p>MSI Academic Advising | <strong><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></strong></p>
-
-
-         <!-- Contact Section -->
-        <section id="contact">
-            <h2 class="section-title">Contact Me</h2>
-
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
-                </div>
-                <button type="submit" class="cta-btn">Send Message</button>
-            </form>
-            <div id="formMessage" class="success-message"></div>
-        </section>
-
+        <p>MSI Academic Advising | <strong><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></strong></p>   
+        
+        <p>© Copyrights <span id="year"></span> by UMSI. All rights reserved.</p>
     </footer>
+
 
     <script>
         document.querySelector(".search-input").addEventListener("keydown", function(event) {

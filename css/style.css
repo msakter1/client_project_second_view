@@ -140,6 +140,16 @@
     color: var(--accent);
     cursor: pointer;
   }
+
+  /* support */
+  .caps-button {
+    display: block;
+    background: rgb(197, 30, 30);
+  }
+
+  .caps-button a {
+    color: white;
+  }
   
   /* Main Content */
   h1 {
@@ -252,32 +262,6 @@
     color: white;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      text-align: center;
-    }
-  
-    nav ul {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .search-bar {
-      grid-column: 1 / -1;
-    }
-  
-    figure img {
-      height: 200px;
-    }
-  
-    section {
-      padding: 1rem;
-    }
-  }
-
 
 /* study spaces */
 .cards {
@@ -342,22 +326,88 @@
 }
 
 
-
-
 /* Contact Form */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+:root {
+  --primary: #00274C;
+  --accent: #FFCB05;
+  --light: #F8F9FA;
+  --secondary: #2F65A7;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+form {
+  /* background: var(--light); */
+  padding: 20px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 5px;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 2px solid var(--secondary);
+  border-radius: 4px;
+  transition: var(--transition);
+  font-size: 16px;
 }
+
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 5px var(--accent);
+}
+
+button {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+
+
+
+/* Responsive Design */
+@media (min-width: 1300px) {
+  header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-bar {
+    grid-column: 1 / -1;
+  }
+
+  figure img {
+    height: 200px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+

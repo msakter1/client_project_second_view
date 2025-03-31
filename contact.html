@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="script.js" defer></script>
-    <title>Student Success Portal</title>
-
+    <title>Tutoring Sites</title>
 </head>
 <body>
     <header>
         <a href="#main-content" class="skip-link">Skip to Main Content</a>
-
         <a href="index.html" id="logo">
             <img src="images/umsi-logo-1.png" alt="UMSI Logo">
         </a>
-
         <br> <br>
-        
+
         <div class="search-bar">
             <input type="text" placeholder="SEARCH" class="search-input" id="searchInput">
             <button class="search-button" onclick="searchPages()">
@@ -34,29 +30,40 @@
                 <li><a href = "study_spaces.html">Study Spaces</a></li>
                 <li><a href = "tutoring_sites.html">Tutoring Sites</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
+                <li class="active"><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        <!-- <h1>Tutoring Sites</h1> -->
     </header>
-    <h1><strong>Page not found</strong></h1>
-    <main class="error-main" tabindex="-1">
-        <h2>ERROR CODE: 404</h2>
-        <p>We are sorry. The page you have requested could not be found.</p>
 
-        <br> <br>
-
-        <h2>Some Helpful Resources</h2>
-        <p>You may find these frequently visited pages helpful</p>
-        <div class="list">
-            <div> <a href="index.html">Homepage</a> </div>
-            <div> <a href = "study_spaces.html">Study Spaces</a> </div>
-            <div> <a href = "tutoring_sites.html">Tutoring Sites</a> </div>
-            <div> <a href = "caps.html">CAPS</a> </div>
-        </div>
+    <h1><strong>Contact Us</strong></h1>
+    <div id="results"></div>
+    <main id="main-content" tabindex="-1">
+        <section tabindex="0">
+            <!-- I used formspree to collect and submit forms-->
+            <form action="https://formspree.io/f/xzzevepp" method="POST">
+                <label>Name:<input type="name" name="name"></label>
+                <label>Email:<input type="email" name="email"></label>
+                <label>Message:<textarea name="message"></textarea></label>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
+
     <footer>
         <p>MSI Academic Advising | <strong><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></strong></p>   
         
         <p>© Copyrights <span id="year"></span> by UMSI. All rights reserved.</p>
     </footer>
+
 </body>
+
+<script>
+    document.querySelector(".search-input").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            searchPages();
+        }
+    });
+</script>
+
 </html>

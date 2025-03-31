@@ -1,28 +1,5 @@
-//------- TODO:---------------------
-// 
-// ----------HOME PAGE-----------
-// 1. Add SEARCH funtionality (PARTLY DONE)
-//   --> Users should be allowed to search keywords, which should show the 5(?) clostest matches out of ALL pages
 
-
-// 2. Add home redirect from the logo (DONE)
-//   --> Users should be able to return to the home page by clicking the UMSI logo
-// 
-// ---------STUDY PAGES----------- (not started)
-// 3. ADD card switch functionality from image to info
-//   ---> Users should be able to click on the library card images to reveal info.
-//   --->
-
-// 4. ADD arrows to switch between the cards 
-// --> add more cards (around 6??)
-// --> add blue right and left arrows that allows users to view all the cards
-
-// ---------ALL PAGES---------------
-// 5. Add more info in the footer
-// --> add the umich logo, UMSI address, contact info, etc
-
-// ---------CAPS PAGE---------------
-// 6. Fix the quality of the student studying together image
+// I used this site (https://www.shecodes.io/athena/38555-how-to-create-a-search-bar-using-html-css-json-and-javascript) as inspo for idea of using json objects of the pages. 
 
 
 const pages = [
@@ -50,10 +27,6 @@ const pages = [
 
 function searchPages() {
     let query = document.getElementById("searchInput").value.toLowerCase();
-    // let results = pages.filter(page => 
-    //     page.title.toLowerCase().includes(query) || 
-    //     page.content.toLowerCase().includes(query)
-    // ).slice(0, 5); // Get top 5 matches
 
     let results = pages.filter(page => 
         page.title.toLowerCase().includes(query) || 
@@ -80,9 +53,5 @@ document.querySelectorAll(".card-image").forEach(image => {
     });
 });
 
-fetch(window.location.href)
-.then(response => {
-  if (!response.ok) {
-    window.location.href = "/404.html";
-  }
-});
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
