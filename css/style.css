@@ -130,10 +130,10 @@
     /* box-shadow: 0 0 15px var(--accent); */
   }
 
-    input::placeholder {
-        color: var(--primary);
-        opacity: 1; 
-    }
+   input::placeholder {
+       color: rgb(255, 255, 255);
+       opacity: 1; 
+   }
 
 
   .search-button {
