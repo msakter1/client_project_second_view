@@ -124,7 +124,8 @@
   
   .search-input:focus {
     outline: none;
-    background: var(--light);
+    background: var(--accent);
+    color: var(--primary);
     /* box-shadow: 0 0 15px var(--accent); */
   }
 
