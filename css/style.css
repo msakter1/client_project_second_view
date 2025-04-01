@@ -358,7 +358,7 @@ button:hover {
   top: 29vh; 
   left: 0;
   width: 20vw;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--light);
   padding: 0.5rem;
   display: none;
