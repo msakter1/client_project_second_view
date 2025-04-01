@@ -409,7 +409,7 @@ button:hover {
 
 
 
-/* Responsive Design */
+
 @media (min-width: 1300px) {
   .cards {
     display: flex;
