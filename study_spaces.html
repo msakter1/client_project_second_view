@@ -39,9 +39,17 @@
     </header>
 
     <h1><strong>Study Spaces</strong></h1>
-    <div id="results"></div>
-    <main id="main-content"> 
-        <section tabindex="0">
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#central">Central Campus</a></li>
+            <li><a href="#north">North Campus</a></li>
+        </ul>
+    </aside>
+
+    <main id="main-content" class="add-side"> 
+        <div id="results"></div>
+        <section tabindex="0" id="central">
             <h2>Central Campus Study Spaces</h2>
             <figure>
                 <img src="images/inside-law-lib-(1).jpg" alt="a moody image of the law libary taken from the middle of the corrider">
@@ -88,7 +96,7 @@
             </div>
         </section>
 
-        <section tabindex="0">
+        <section tabindex="0" id="north">
             <h2>North Campus Study Spaces</h2>
             <figure>
                 <img src="images/snow-dude-(1).jpg" alt="A two-point perspective image of the Duderstadt library in North Campus of University of Michigan">

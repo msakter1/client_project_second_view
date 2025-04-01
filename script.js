@@ -48,8 +48,8 @@ document.querySelector(".search-input").addEventListener("keydown", function(eve
 
 document.querySelectorAll(".card-image").forEach(image => {
     image.addEventListener("click", function() {
-        const cardText = this.nextElementSibling.querySelector(".card-text"); // Get the text container (ul)
-        cardText.classList.toggle("revealed");  // Toggle the visibility of the text
+        const cardText = this.nextElementSibling.querySelector(".card-text"); 
+        cardText.classList.toggle("revealed"); 
     });
 });
 

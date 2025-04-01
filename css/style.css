@@ -1,7 +1,7 @@
 
 :root {
-    --primary: #00274C;
-    --accent: #FFCB05;
+    --primary: #00274C;    /* RGB(0, 39, 76) */
+    --accent: #FFCB05;  /* RGB(255, 203, 5) */
     --light: #F8F9FA;
     --secondary: #2F65A7;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -264,66 +264,6 @@
   
 
 /* study spaces */
-.cards {
-    display: flex;
-    flex-flow: row;
-}
-
-
-.lib-card {
-    background-color: var(--primary);
-    color: var(--light);
-    margin: 1%;
-
-    position: relative;
-    transition: 0.3s ease-in-out;
-}
-
-.lib-card ul li {
-    padding: 1%;
-}
-
-.card-main-con {
-    padding: 3%;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.card-main-con ul {
-    z-index: 2;
-}
-
-.card-main-con img {
-    width: 100%;
-    height: 86%;
-    object-fit: cover; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; 
-    transition: opacity 0.3s ease-in-out;
-}
-
-
-.header {
-    background-color: var(--accent);
-    color: var(--primary);
-    padding: 3%;
-    text-align: center;
-    width: 100%;
-    z-index: 2;
-}
-
-.lib-card:focus-within .card-main-con ul,
-.lib-card:hover .card-main-con ul, .lib-card:focus .card-main-con ul  {
-    opacity: 1;
-}
-
-.lib-card:focus-within .card-main-con img,
-.lib-card:hover .card-main-con img, .lib-card:focus .card-main-con img  {
-    opacity: 0;
-}
 
 
 /* Contact Form */
@@ -383,31 +323,159 @@ button:hover {
 }
 
 
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%; 
+  margin: auto;
+  overflow: hidden;
+}
+
+.welcome img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.welcome-content {
+  position: absolute;
+  color: white;
+  background: rgb(47, 101, 167, 0.8); 
+  text-align: center;
+  padding: 2vw 4%; 
+  width: 80%; 
+  max-width: 90%; 
+  /* border-radius: 2vw;  */
+}
+
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 29vh; 
+  left: 0;
+  width: 20vw;
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 0.5rem;
+  display: none;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+  position: relative; 
+}
+
+.sidebar li:not(:last-child)::after  {
+  content: '';
+  position: absolute;
+  bottom: 0;  
+  left: 50%;  
+  transform: translateX(-50%);  
+  width: 60%;  
+  border-bottom: 2px solid var(--light); 
+}
+
+.sidebar a {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 1.3vw; 
+  font-weight: bold;
+  display: block;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+
+  text-align: center;
+}
+
+.sidebar a:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+
 
 
 /* Responsive Design */
 @media (min-width: 1300px) {
-  header {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    text-align: center;
+  .cards {
+    display: flex;
+    flex-flow: row;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
+
+  .lib-card {
+      background-color: var(--primary);
+      color: var(--light);
+      margin: 1%;
+
+      position: relative;
+      transition: 0.3s ease-in-out;
   }
 
-  .search-bar {
-    grid-column: 1 / -1;
+  .lib-card ul li {
+      padding: 1%;
   }
 
-  figure img {
-    height: 200px;
+  .card-main-con {
+      padding: 3%;
+      width: 100%;
+      height: 100%;
+      position: relative;
   }
 
-  section {
-    padding: 1rem;
+  .card-main-con ul {
+      z-index: 2;
   }
+
+  .card-main-con img {
+      width: 100%;
+      height: 86%;
+      object-fit: cover; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; 
+      transition: opacity 0.3s ease-in-out;
+  }
+
+
+  .header {
+      background-color: var(--accent);
+      color: var(--primary);
+      padding: 3%;
+      text-align: center;
+      width: 100%;
+      z-index: 2;
+  }
+
+  .lib-card:focus-within .card-main-con ul,
+  .lib-card:hover .card-main-con ul, .lib-card:focus .card-main-con ul  {
+      opacity: 1;
+  }
+
+  .lib-card:focus-within .card-main-con img,
+  .lib-card:hover .card-main-con img, .lib-card:focus .card-main-con img  {
+      opacity: 0;
+  }
+
+  /* sidebar */
+  .sidebar {
+    display: block; 
+  }
+
+  .add-side {
+    margin-left: 270px; 
+  }
+  
+
 }
-

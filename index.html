@@ -21,10 +21,9 @@
         
         <div class="search-bar">
             <input type="text" placeholder="SEARCH" class="search-input" id="searchInput">
-            <button class="search-button" onclick="searchPages()">
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-              </svg>
+
+            <button class="search-button" onclick="searchPages()"> Search
+                <i class="fa fa-search"></i> 
             </button>
         </div>
 
@@ -43,28 +42,39 @@
     
 
     <h1><strong>Student Success Portal</strong></h1>
-    <div id="results"></div>
-    <main id="main-content" tabindex="-1">
-        <section tabindex="0">
-            <h2>Welcome to the UM Grad Success Navigator</h2>
-            <p> Your Comprehensive Guide to Resources for Graduate School Success</p>
-            <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
 
-            <article>Academic Resources</article>
+    <!-- I used w3schools (https://www.w3schools.com/tags/tag_aside.asp) to learn how to add a sidebar-->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#physical-health">Physical Health</a></li>
+            <li><a href="#mental-health">Mental Health</a></li>
+            <li><a href="#life-outside-classroom">Life Outside the Classroom</a></li>
+        </ul>
+    </aside>
+
+    <main id="main-content" tabindex="-1" class="add-side">
+        <div id="results"></div>
+        <section tabindex="0" class="welcome" id="welcome">
+            <div class="welcome-content">
+                <h2>Welcome to the UM Grad Success Navigator</h2>
+                <p> Your Comprehensive Guide to Resources for Graduate School Success.</p>
+                <p>This guide is set up to help you be successul inside and outside of the classroom.</p>
+            </div>
+            <img src="images/chem_atrium.jpg" alt="A shot of the chemistry building atrium, showcasing the geometric ceiling">
+        </section>
+
+        <section tabindex="0" id="resources">
+            <h2>There are resources for:</h2>
+            <article>Academics</article>
             <article>Physical Health</article>
             <article>Mental Health</article>
             <article>Life Outside Classroom</article>
             <article>Contact</article>
-            <!-- <ol>
-                <li>Academic Resources</li>
-                <li>Physical Health</li>
-                <li>Mental Health</li>
-                <li>Life Outside Classroom</li>
-                <li>Contact</li>
-            </ol> -->
         </section>
 
-        <section tabindex="0">
+        <section tabindex="0" id="physical-health">
             <h2>Physical Health</h2>
             <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition:</p>
             
@@ -87,7 +97,7 @@
             </article>
         </section>
         
-        <section tabindex="0">
+        <section tabindex="0" id="mental-health">
             <h2>Mental Health</h2>
             <p>Maintaining your mental well-being is crucial for thriving in graduate school. Here are resources to support your mental health:</p>
             <article>
@@ -112,7 +122,7 @@
         </section>
 
         
-        <section id="life-outside-classroom" tabindex="0">
+        <section id="life-outside-classroom" tabindex="0" id="life-outside-classroom">
             <h2>Life Outside the Classroom</h2>
             <p>Graduate school is more than just academics. It's important to cultivate a balanced life. Here are some resources to help you enjoy life outside the classroom:</p>
             
